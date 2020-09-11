@@ -1,5 +1,5 @@
 //
-//  ChooseCourseViewController.swift
+//  AddHoleViewController.swift
 //  Which-Way
 //
 //  Created by Ed Wied on 9/10/20.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ChooseCourseViewController: UIViewController {
-
+class AddHoleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,11 +17,6 @@ class ChooseCourseViewController: UIViewController {
     @IBAction func press_home(_ sender: Any) {
         print("HOME")
         transition(goingTo: "homeID")
-    }
-    
-    @IBAction func press_ar(_ sender: Any) {
-        print("GO TO AR")
-        transition(goingTo: "arID")
     }
     
     func transition(goingTo:String) {

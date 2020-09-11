@@ -20,6 +20,11 @@ class AdminViewController: UIViewController {
         transition(goingTo: "homeID")
     }
     
+    @IBAction func login(_ sender: Any) {
+        print("loging in")
+        transition(goingTo: "addHoleID")
+    }
+    
     func transition(goingTo:String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let secondVC = storyboard.instantiateViewController(identifier: goingTo)

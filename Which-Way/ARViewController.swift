@@ -1,5 +1,5 @@
 //
-//  ChooseCourseViewController.swift
+//  ARViewController.swift
 //  Which-Way
 //
 //  Created by Ed Wied on 9/10/20.
@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import ARKit
 
-class ChooseCourseViewController: UIViewController {
-
+class ARViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,9 +20,9 @@ class ChooseCourseViewController: UIViewController {
         transition(goingTo: "homeID")
     }
     
-    @IBAction func press_ar(_ sender: Any) {
-        print("GO TO AR")
-        transition(goingTo: "arID")
+    @IBAction func press_new_hole(_ sender: Any) {
+        print("NEW HOLE")
+        transition(goingTo: "courseID")
     }
     
     func transition(goingTo:String) {

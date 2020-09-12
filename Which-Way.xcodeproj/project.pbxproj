@@ -44,7 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7E22FC54250B17FE00A8C3B8 /* Which-Way.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Which-Way.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E22FC54250B17FE00A8C3B8 /* Which Way?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Which Way?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E22FC57250B17FE00A8C3B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E22FC59250B17FE00A8C3B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7E22FC5B250B17FE00A8C3B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		7E22FC55250B17FE00A8C3B8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7E22FC54250B17FE00A8C3B8 /* Which-Way.app */,
+				7E22FC54250B17FE00A8C3B8 /* Which Way?.app */,
 				7E22FC6A250B180000A8C3B8 /* Which-WayTests.xctest */,
 				7E22FC75250B180000A8C3B8 /* Which-WayUITests.xctest */,
 			);
@@ -196,7 +196,7 @@
 			);
 			name = "Which-Way";
 			productName = "Which-Way";
-			productReference = 7E22FC54250B17FE00A8C3B8 /* Which-Way.app */;
+			productReference = 7E22FC54250B17FE00A8C3B8 /* Which Way?.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7E22FC69250B180000A8C3B8 /* Which-WayTests */ = {
@@ -502,9 +502,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.annawandev.Which-Way";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Which Way?";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -520,9 +520,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.annawandev.Which-Way";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Which Way?";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

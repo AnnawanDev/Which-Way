@@ -171,9 +171,26 @@
                                     <action selector="press_home:" destination="StF-Av-Iem" eventType="touchUpInside" id="pFb-Q2-AUc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBn-S8-Ch1">
+                                <rect key="frame" x="82" y="50" width="250" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="LBA-fA-Opg"/>
+                                    <constraint firstAttribute="height" constant="30" id="umA-rB-GSl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aS-SE-K0n">
+                                <rect key="frame" x="0.0" y="-3" width="414" height="739"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="GBn-S8-Ch1" firstAttribute="top" secondItem="Eyw-fR-T8S" secondAttribute="top" constant="50" id="4jN-RU-ijT"/>
+                            <constraint firstItem="GBn-S8-Ch1" firstAttribute="centerX" secondItem="YoX-BH-e77" secondAttribute="centerX" id="5jI-re-33h"/>
                             <constraint firstItem="Eyw-fR-T8S" firstAttribute="trailing" secondItem="Wuz-Pw-lMw" secondAttribute="trailing" constant="25" id="PRI-Vx-u5Y"/>
                             <constraint firstItem="Eyw-fR-T8S" firstAttribute="bottom" secondItem="5Mg-wh-tzW" secondAttribute="bottom" constant="25" id="gJB-ou-Fil"/>
                             <constraint firstItem="Eyw-fR-T8S" firstAttribute="bottom" secondItem="Wuz-Pw-lMw" secondAttribute="bottom" constant="25" id="jzc-D4-zsL"/>
@@ -181,10 +198,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Eyw-fR-T8S"/>
                     </view>
+                    <connections>
+                        <outlet property="distanceAwayInYards" destination="GBn-S8-Ch1" id="u6x-fx-g4R"/>
+                        <outlet property="sceneView" destination="4aS-SE-K0n" id="2ap-fl-p4x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebC-HN-RBK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2055" y="-702"/>
+            <point key="canvasLocation" x="2053.6231884057975" y="-702.71739130434787"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="jl6-aX-zJb">

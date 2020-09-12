@@ -65,7 +65,6 @@ class AddHoleViewController: BaseViewController, CLLocationManagerDelegate, UIPi
         //set up picker
         self.holePicker.delegate = self
         self.holePicker.dataSource = holes
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -9,10 +9,12 @@
 import UIKit
 
 class AboutViewController: BaseViewController {
+    
+    @IBOutlet weak var aboutText: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        aboutText.text = "Some kind of about text\n\nBlah blah blah..."
     }
 
     @IBAction func press_home(_ sender: Any) {

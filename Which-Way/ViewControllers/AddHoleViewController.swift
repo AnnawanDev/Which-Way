@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class AddHoleViewController: UIViewController, CLLocationManagerDelegate, UIPickerViewDelegate {
+class AddHoleViewController: BaseViewController, CLLocationManagerDelegate, UIPickerViewDelegate {
 
     //outlets
     @IBOutlet weak var currentlatitudePosition: UILabel!
@@ -25,8 +25,7 @@ class AddHoleViewController: UIViewController, CLLocationManagerDelegate, UIPick
     
     //buttons
     @IBAction func press_home(_ sender: Any) {
-        print("HOME")
-        transition(goingTo: "homeID")
+        transition(goingTo: Destination.homeID.rawValue)
     }
     
     //TODO - currently saving data to singleton - replace by saving to disk or some kind of coredata solution
@@ -76,15 +75,6 @@ class AddHoleViewController: UIViewController, CLLocationManagerDelegate, UIPick
         //get initial saved position for hole 1
         savedlatitudePosition.text = String(holes.holeGPSLocations[0].lat)
         savedlongitudePosition.text = String(holes.holeGPSLocations[0].long)
-    }
-
-    //navigation -- TODO: break out in common class across views
-    func transition(goingTo:String) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: goingTo)
-        secondVC.modalPresentationStyle = .fullScreen
-        secondVC.modalTransitionStyle = .crossDissolve
-        show(secondVC, sender: self)
     }
     
     // delegate methods

@@ -9,27 +9,18 @@
 import UIKit
 import ARKit
 
-class ARViewController: UIViewController {
+class ARViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func press_home(_ sender: Any) {
-        print("HOME")
-        transition(goingTo: "homeID")
+        transition(goingTo: Destination.homeID.rawValue)
     }
     
     @IBAction func press_new_hole(_ sender: Any) {
-        print("NEW HOLE")
-        transition(goingTo: "courseID")
+        transition(goingTo: Destination.courseID.rawValue)
     }
     
-    func transition(goingTo:String) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: goingTo)
-        secondVC.modalPresentationStyle = .fullScreen
-        secondVC.modalTransitionStyle = .crossDissolve
-        show(secondVC, sender: self)
-    }
 }

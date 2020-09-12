@@ -8,28 +8,34 @@
 
 import UIKit
 
-class AdminViewController: UIViewController {
-
+class AdminViewController: BaseViewController {
+    
+    @IBOutlet weak var loginFeedback: UILabel!
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var password: UITextField!
+    
+    //todo: implement real authentication
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        loginFeedback.text = ""
+        username.text = ""
+        password.text = ""
+        
     }
 
     @IBAction func press_home(_ sender: Any) {
-        print("HOME")
-        transition(goingTo: "homeID")
+        transition(goingTo: Destination.homeID.rawValue)
     }
     
     @IBAction func login(_ sender: Any) {
-        print("loging in")
-        transition(goingTo: "addHoleID")
+        if username.text == "admin" && password.text == "admin" {
+            transition(goingTo: Destination.addHoleID.rawValue)
+        } else {
+            loginFeedback.text = "Sorry, wrong username and/or password"
+        }
+        
     }
     
-    func transition(goingTo:String) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: goingTo)
-        secondVC.modalPresentationStyle = .fullScreen
-        secondVC.modalTransitionStyle = .crossDissolve
-        show(secondVC, sender: self)
-    }
 }

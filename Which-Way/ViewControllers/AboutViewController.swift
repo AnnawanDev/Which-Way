@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutViewController: UIViewController {
+class AboutViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,15 +16,7 @@ class AboutViewController: UIViewController {
     }
 
     @IBAction func press_home(_ sender: Any) {
-        print("HOME")
-        transition(goingTo: "homeID")
+        transition(goingTo: Destination.homeID.rawValue)
     }
     
-    func transition(goingTo:String) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: goingTo)
-        secondVC.modalPresentationStyle = .fullScreen
-        secondVC.modalTransitionStyle = .crossDissolve
-        show(secondVC, sender: self)
-    }
 }

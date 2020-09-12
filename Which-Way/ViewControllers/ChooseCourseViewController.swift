@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChooseCourseViewController: UIViewController {
+class ChooseCourseViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,20 +16,10 @@ class ChooseCourseViewController: UIViewController {
     }
 
     @IBAction func press_home(_ sender: Any) {
-        print("HOME")
-        transition(goingTo: "homeID")
+        transition(goingTo: Destination.homeID.rawValue)
     }
     
     @IBAction func press_ar(_ sender: Any) {
-        print("GO TO AR")
-        transition(goingTo: "arID")
-    }
-    
-    func transition(goingTo:String) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: goingTo)
-        secondVC.modalPresentationStyle = .fullScreen
-        secondVC.modalTransitionStyle = .crossDissolve
-        show(secondVC, sender: self)
+        transition(goingTo: Destination.arID.rawValue)
     }
 }

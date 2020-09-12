@@ -8,34 +8,23 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: BaseViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func press_course(_ sender: Any) {
-        print("COURSE")
-        transition(goingTo: "courseID")
+        transition(goingTo: Destination.courseID.rawValue)
     }
     
     @IBAction func press_about(_ sender: Any) {
-        print("ABOUT")
-        transition(goingTo: "aboutID")
+        transition(goingTo: Destination.aboutID.rawValue)
     }
     
     @IBAction func press_admin(_ sender: Any) {
-        print("ADMIN")
-        transition(goingTo: "adminID")
-    }
-    
-    func transition(goingTo:String) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: goingTo)
-        secondVC.modalPresentationStyle = .fullScreen
-        secondVC.modalTransitionStyle = .crossDissolve
-        show(secondVC, sender: self)
+        //transition(goingTo: "adminLoginScreen")
+        transition(goingTo: Destination.addHoleID.rawValue)
     }
 }
 

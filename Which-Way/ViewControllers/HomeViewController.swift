@@ -1,5 +1,5 @@
 //
-//  AddHoleViewController.swift
+//  ViewController.swift
 //  Which-Way
 //
 //  Created by Ed Wied on 9/10/20.
@@ -8,15 +8,26 @@
 
 import UIKit
 
-class AddHoleViewController: UIViewController {
+class HomeViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func press_home(_ sender: Any) {
-        print("HOME")
-        transition(goingTo: "homeID")
+    @IBAction func press_course(_ sender: Any) {
+        print("COURSE")
+        transition(goingTo: "courseID")
+    }
+    
+    @IBAction func press_about(_ sender: Any) {
+        print("ABOUT")
+        transition(goingTo: "aboutID")
+    }
+    
+    @IBAction func press_admin(_ sender: Any) {
+        print("ADMIN")
+        transition(goingTo: "adminID")
     }
     
     func transition(goingTo:String) {
@@ -27,3 +38,4 @@ class AddHoleViewController: UIViewController {
         show(secondVC, sender: self)
     }
 }
+

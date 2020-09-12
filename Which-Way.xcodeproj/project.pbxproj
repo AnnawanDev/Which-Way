@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7E22FC58250B17FE00A8C3B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E22FC57250B17FE00A8C3B8 /* AppDelegate.swift */; };
 		7E22FC5A250B17FE00A8C3B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E22FC59250B17FE00A8C3B8 /* SceneDelegate.swift */; };
-		7E22FC5C250B17FE00A8C3B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E22FC5B250B17FE00A8C3B8 /* ViewController.swift */; };
+		7E22FC5C250B17FE00A8C3B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E22FC5B250B17FE00A8C3B8 /* HomeViewController.swift */; };
 		7E22FC5F250B17FE00A8C3B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E22FC5D250B17FE00A8C3B8 /* Main.storyboard */; };
 		7E22FC61250B180000A8C3B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E22FC60250B180000A8C3B8 /* Assets.xcassets */; };
 		7E22FC64250B180000A8C3B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E22FC62250B180000A8C3B8 /* LaunchScreen.storyboard */; };
@@ -20,6 +20,7 @@
 		7E22FC8C250B1EE600A8C3B8 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E22FC8B250B1EE600A8C3B8 /* AdminViewController.swift */; };
 		7E22FC92250B330200A8C3B8 /* AddHoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E22FC91250B330200A8C3B8 /* AddHoleViewController.swift */; };
 		7E22FC94250B358D00A8C3B8 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E22FC93250B358D00A8C3B8 /* ARViewController.swift */; };
+		7E2ADEE9250D061400DEA0A1 /* Holes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ADEE8250D061400DEA0A1 /* Holes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,7 @@
 		7E22FC54250B17FE00A8C3B8 /* Which-Way.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Which-Way.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E22FC57250B17FE00A8C3B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E22FC59250B17FE00A8C3B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7E22FC5B250B17FE00A8C3B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E22FC5B250B17FE00A8C3B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7E22FC5E250B17FE00A8C3B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E22FC60250B180000A8C3B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E22FC63250B180000A8C3B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 		7E22FC8B250B1EE600A8C3B8 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		7E22FC91250B330200A8C3B8 /* AddHoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHoleViewController.swift; sourceTree = "<group>"; };
 		7E22FC93250B358D00A8C3B8 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		7E2ADEE8250D061400DEA0A1 /* Holes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,15 +111,11 @@
 		7E22FC56250B17FE00A8C3B8 /* Which-Way */ = {
 			isa = PBXGroup;
 			children = (
+				7E2ADEE7250D05EE00DEA0A1 /* Models */,
+				7E2ADEE6250CF12D00DEA0A1 /* ViewControllers */,
 				7E22FC57250B17FE00A8C3B8 /* AppDelegate.swift */,
 				7E22FC59250B17FE00A8C3B8 /* SceneDelegate.swift */,
-				7E22FC5B250B17FE00A8C3B8 /* ViewController.swift */,
-				7E22FC87250B1EAE00A8C3B8 /* ChooseCourseViewController.swift */,
-				7E22FC89250B1ED200A8C3B8 /* AboutViewController.swift */,
-				7E22FC8B250B1EE600A8C3B8 /* AdminViewController.swift */,
-				7E22FC91250B330200A8C3B8 /* AddHoleViewController.swift */,
 				7E22FC5D250B17FE00A8C3B8 /* Main.storyboard */,
-				7E22FC93250B358D00A8C3B8 /* ARViewController.swift */,
 				7E22FC60250B180000A8C3B8 /* Assets.xcassets */,
 				7E22FC62250B180000A8C3B8 /* LaunchScreen.storyboard */,
 				7E22FC65250B180000A8C3B8 /* Info.plist */,
@@ -141,6 +139,27 @@
 				7E22FC7B250B180000A8C3B8 /* Info.plist */,
 			);
 			path = "Which-WayUITests";
+			sourceTree = "<group>";
+		};
+		7E2ADEE6250CF12D00DEA0A1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E22FC5B250B17FE00A8C3B8 /* HomeViewController.swift */,
+				7E22FC87250B1EAE00A8C3B8 /* ChooseCourseViewController.swift */,
+				7E22FC89250B1ED200A8C3B8 /* AboutViewController.swift */,
+				7E22FC8B250B1EE600A8C3B8 /* AdminViewController.swift */,
+				7E22FC91250B330200A8C3B8 /* AddHoleViewController.swift */,
+				7E22FC93250B358D00A8C3B8 /* ARViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7E2ADEE7250D05EE00DEA0A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E2ADEE8250D061400DEA0A1 /* Holes.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,11 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E2ADEE9250D061400DEA0A1 /* Holes.swift in Sources */,
 				7E22FC92250B330200A8C3B8 /* AddHoleViewController.swift in Sources */,
 				7E22FC8C250B1EE600A8C3B8 /* AdminViewController.swift in Sources */,
 				7E22FC88250B1EAE00A8C3B8 /* ChooseCourseViewController.swift in Sources */,
 				7E22FC94250B358D00A8C3B8 /* ARViewController.swift in Sources */,
-				7E22FC5C250B17FE00A8C3B8 /* ViewController.swift in Sources */,
+				7E22FC5C250B17FE00A8C3B8 /* HomeViewController.swift in Sources */,
 				7E22FC58250B17FE00A8C3B8 /* AppDelegate.swift in Sources */,
 				7E22FC8A250B1ED200A8C3B8 /* AboutViewController.swift in Sources */,
 				7E22FC5A250B17FE00A8C3B8 /* SceneDelegate.swift in Sources */,

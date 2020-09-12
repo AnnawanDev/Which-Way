@@ -1,6 +1,23 @@
 # Which Way?
-A hackathon app
+Which Way? is an app made as part of the OSU Hackathon project, Sept 10-13th.
+
+### Goal
 
 
-### Credits
-* .gitignore taken from https://gopher.it/snippets/gitignore-for-ios-project
+### Team
+
+
+### Technologies used
+
+
+### Architecture
+
+
+
+### Demo
+
+
+### Future direction
+
+
+### Lessons learned

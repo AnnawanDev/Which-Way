@@ -10,7 +10,7 @@ Hacathon page on DevPost: https://beaverhacks-fall-2020.devpost.com/
 The focus on the hackathon is "health" which I took as promoting a healthy lifestyle by encouraging fitness and getting outdoors.  This app addresses the issue of not being able to find the golf flag (or pin) while on a course.  Sometimes there are hills, trees, or other obstacles that block view of where exactly the pin is located and you as the player don't know where to hit the ball.  This helps the golfer orient toward the flag.
 
 ### Team
-* Annawan Dev (aka Ed Wied)
+* AnnawanDev (aka Ed Wied)
 
 
 ### Technologies used

@@ -23,8 +23,8 @@ class HomeViewController: BaseViewController {
     }
     
     @IBAction func press_admin(_ sender: Any) {
-        //transition(goingTo: "adminLoginScreen")               //use login screen
-        transition(goingTo: Destination.addHoleID.rawValue)     //skip login screen
+        transition(goingTo: "adminLoginScreen")               //use login screen
+        //transition(goingTo: Destination.addHoleID.rawValue)     //skip login screen
     }
 }
 

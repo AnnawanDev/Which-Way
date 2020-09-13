@@ -54,6 +54,7 @@ This hackathon was a great opportunity for some deep diving on technologies.  I 
 * Admin web site to add/manage admin users
 * Golf course choices are for show only.  The hole data is not linked to a particular course.  Need to tie different hold GPS data to different courses.  Need back-end API to save data.
 * Add MapKit to give overview view of where player is in relation to pin
+* Add test coverage with unit tests 
 
 
 ### Challenges:

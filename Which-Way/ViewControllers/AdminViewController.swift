@@ -38,4 +38,9 @@ class AdminViewController: BaseViewController {
         
     }
     
+    //dismiss keyboard after user hits return key
+    @IBAction func dismissKeyboard(_ sender:UITapGestureRecognizer) {
+        username.resignFirstResponder()
+        password.resignFirstResponder()
+    }
 }

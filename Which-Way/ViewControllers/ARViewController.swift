@@ -41,6 +41,9 @@ class ARViewController: BaseViewController, CLLocationManagerDelegate, ARSCNView
         // as soon as scene view, need to mnake sure scene view has configuration
         self.sceneView.session.run(configruation)
         
+        // turn on source of light
+        self.sceneView.autoenablesDefaultLighting = true
+        
         //set sceneview delegate to self
         self.sceneView.delegate = self
         
@@ -51,6 +54,9 @@ class ARViewController: BaseViewController, CLLocationManagerDelegate, ARSCNView
         
         //confirm hole chosen
         print("Chose hole # \(Int(holes.currentHole))")
+        
+        //load 3d marker
+        self.addDirectionPointerToHole()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -97,7 +103,23 @@ class ARViewController: BaseViewController, CLLocationManagerDelegate, ARSCNView
         let doubleFormat = ".1"
         distanceAwayInYards.text = "Distance to pin: \(distanceInYards.format(f: doubleFormat))"
         
-        // TODO: get bearing
+        // TODO: get orientation to hole / adjust 3d image to point user toward hole
+
+    }
+    
+    func addDirectionPointerToHole() {
+        let boxNode = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0))
+        boxNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
+        boxNode.position = SCNVector3(0, -0.05, 0)
+
+        let node = SCNNode()
+        node.geometry = SCNPyramid(width: 0.1, height: 0.1, length: 0.1)
+        node.position = SCNVector3(0.2, 0.3, -0.2)
+        node.geometry?.firstMaterial?.diffuse.contents = UIColor.orange
+        node.eulerAngles = SCNVector3(Float(90.degreesToRadians), Float(130.degreesToRadians),0)
+
+        self.sceneView.scene.rootNode.addChildNode(node)
+        node.addChildNode(boxNode)
 
     }
 }
@@ -115,4 +137,9 @@ extension Double {
     func toDegrees() -> Double {
         return self * 180.0 / .pi
     }
+}
+
+
+extension Int {
+    var degreesToRadians: Double { return Double(self) * .pi/180 }
 }

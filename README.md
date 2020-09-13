@@ -9,6 +9,7 @@ Hacathon page on DevPost: https://beaverhacks-fall-2020.devpost.com/
 
 The focus on the hackathon is "health" which I took as promoting a healthy lifestyle by encouraging fitness and getting outdoors.  This app addresses the issue of not being able to find the golf flag (or pin) while on a course.  Sometimes there are hills, trees, or other obstacles that block view of where exactly the pin is located and you as the player don't know where to hit the ball.  This helps the golfer orient toward the flag.
 
+
 ### Team
 * AnnawanDev (aka Ed Wied)
 
@@ -22,6 +23,7 @@ The app is divided into three sections:
 * hole finder
 * about
 * admin screen
+
 
 ##### Hole Finder
 The user chooses a course, followed by a hole, then they are taken to a page where they can see the distance to the pin and get a 3d orientation on where to hit toward.
@@ -54,7 +56,7 @@ This hackathon was a great opportunity for some deep diving on technologies.  I 
 * Admin web site to add/manage admin users
 * Golf course choices are for show only.  The hole data is not linked to a particular course.  Need to tie different hold GPS data to different courses.  Need back-end API to save data.
 * Add MapKit to give overview view of where player is in relation to pin
-* Add test coverage with unit tests 
+* Add test coverage with unit tests
 
 
 ### Challenges:
@@ -74,3 +76,5 @@ This hackathon was a great opportunity for some deep diving on technologies.  I 
 
 ### Final thoughts
 Adding CoreLocation was easy.  I found it pretty straightforward to get the current device location.  I dived into some [AR (augmented reality) tutorials on Udemy](https://www.udemy.com/course/ios-augmented-reality-the-complete-course-on-arkit/) and found it a lot easier than I thought to add AR.  The real tricky part was getting the bearing to the target location and then constantly updating that visually in the screen.  That'll have to be a future todo in fleshing out this project post-hackathon.  The other thought is that the data is not persisted, so while it's fine for a hackathon, you need a real back-end system to store the data.  Altogether it was a fun couple days of coding.
+
+![Which Way?](whichway_onphone.jpg)

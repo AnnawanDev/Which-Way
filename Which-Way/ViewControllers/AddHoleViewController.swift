@@ -31,7 +31,7 @@ class AddHoleViewController: BaseViewController, CLLocationManagerDelegate, UIPi
     //TODO - currently saving data to singleton - replace by saving to disk or some kind of coredata solution
     @IBAction func update_hole_GPS(_ sender: Any) {
         //todo - safely unwrap value
-        let currentlySelectedHoleIndex:Int = 0// Int(holes.holeChoices[holePicker.selectedRow(inComponent: 0)])!
+        let currentlySelectedHoleIndex:Int = holePicker.selectedRow(inComponent: 0)
         
         //todo - get from CoreData rather than text
         //todo - safely unwrap values

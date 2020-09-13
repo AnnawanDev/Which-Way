@@ -25,10 +25,11 @@ The focus on the hackathon is "health" which I took as promoting healthy lifesty
 
 
 ### Future direction
-* hole information either persisted locally or using API to load and store off-app (or both)
-* move away from using singleton pattern for sharing data - useful but can be difficult to maintain/scale, possible source of bugs later
-* admin authentication off app (must)
-* admin site to add/manage admin users
+* Hole information either persisted locally or using API to load and store off-app (or both).
+* Move away from using singleton pattern for sharing data - useful but can be difficult to maintain/scale, possible source of bugs later.
+* Admin authentication off-app (must).
+* Admin web site to add/manage admin users
+* Golf course choices are for show only.  The hole data is not linked to a particular course.  Need to tie different hold GPS data to different courses.  Need back-end API to save data.
 
 
 ### Challenges:

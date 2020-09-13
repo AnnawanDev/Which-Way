@@ -18,7 +18,7 @@ class AboutViewController: BaseViewController {
     }
 
     @IBAction func press_home(_ sender: Any) {
-        transition(goingTo: Destination.homeID.rawValue)
+        transition(goingTo: Destination.homeID.rawValue)     //go to "home" page
     }
     
 }

@@ -33,7 +33,7 @@ class ChooseCourseViewController: BaseViewController, UIPickerViewDelegate {
     }
     
     @IBAction func press_ar(_ sender: Any) {
-        transition(goingTo: Destination.arID.rawValue)
+        transition(goingTo: Destination.userHolePicker.rawValue)
     }
     
     // delegate methods

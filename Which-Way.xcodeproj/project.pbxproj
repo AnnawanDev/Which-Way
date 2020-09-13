@@ -24,6 +24,7 @@
 		7E4E4ABF250D3C970017D544 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E4ABE250D3C970017D544 /* BaseViewController.swift */; };
 		7E4E4AC2250D3DC70017D544 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E4AC1250D3DC70017D544 /* Destination.swift */; };
 		7E4E4AC4250D41E90017D544 /* GolfCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E4AC3250D41E90017D544 /* GolfCourses.swift */; };
+		7E4E4AD0250E43BF0017D544 /* HoleChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E4ACF250E43BF0017D544 /* HoleChooserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		7E4E4ABE250D3C970017D544 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7E4E4AC1250D3DC70017D544 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		7E4E4AC3250D41E90017D544 /* GolfCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolfCourses.swift; sourceTree = "<group>"; };
+		7E4E4ACF250E43BF0017D544 /* HoleChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleChooserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				7E22FC91250B330200A8C3B8 /* AddHoleViewController.swift */,
 				7E22FC93250B358D00A8C3B8 /* ARViewController.swift */,
 				7E4E4ABE250D3C970017D544 /* BaseViewController.swift */,
+				7E4E4ACF250E43BF0017D544 /* HoleChooserViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E4E4AD0250E43BF0017D544 /* HoleChooserViewController.swift in Sources */,
 				7E4E4AC4250D41E90017D544 /* GolfCourses.swift in Sources */,
 				7E2ADEE9250D061400DEA0A1 /* Holes.swift in Sources */,
 				7E22FC92250B330200A8C3B8 /* AddHoleViewController.swift in Sources */,

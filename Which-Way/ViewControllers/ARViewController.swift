@@ -10,12 +10,13 @@ import UIKit
 import ARKit
 import CoreLocation
 
-
-class ARViewController: BaseViewController, CLLocationManagerDelegate {
+class ARViewController: BaseViewController, CLLocationManagerDelegate, ARSCNViewDelegate {
     
     //outlets
     @IBOutlet weak var distanceAwayInYards: UILabel!
     @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var newHoleButton: UIButton!
+    @IBOutlet weak var goHomeButton: UIButton!
     
     //instance variables
     var locationManager: CLLocationManager!
@@ -23,6 +24,8 @@ class ARViewController: BaseViewController, CLLocationManagerDelegate {
     var userCurrentLatitude: Double = 0.0
     var holes:Holes!
     let configruation = ARWorldTrackingConfiguration()
+    var userCurrentLocation:CLLocation!
+    //var holeChosen: Int!
     
     //overrides
     override func viewDidLoad() {
@@ -30,6 +33,7 @@ class ARViewController: BaseViewController, CLLocationManagerDelegate {
         
         // initialize hole data
         holes = Holes.holeDS
+        //holeChosen = holes.currentHole
         
         //add AR debug options
         self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
@@ -37,9 +41,16 @@ class ARViewController: BaseViewController, CLLocationManagerDelegate {
         // as soon as scene view, need to mnake sure scene view has configuration
         self.sceneView.session.run(configruation)
         
-        //make sure distance label is on top
+        //set sceneview delegate to self
+        self.sceneView.delegate = self
+        
+        //place buttons and labels on top of ARScene
         self.distanceAwayInYards.layer.zPosition = 100
-
+        self.newHoleButton.layer.zPosition = 99
+        self.goHomeButton.layer.zPosition = 98
+        
+        //confirm hole chosen
+        print("Chose hole # \(Int(holes.currentHole))")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,12 +63,13 @@ class ARViewController: BaseViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func press_new_hole(_ sender: Any) {
-        transition(goingTo: Destination.courseID.rawValue)
+        transition(goingTo: Destination.userHolePicker.rawValue)
     }
     
     // delegate methods
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let userCurrentLocation:CLLocation = locations[0] as CLLocation
+        //let userCurrentLocation:CLLocation = locations[0] as CLLocation
+        userCurrentLocation = locations[0] as CLLocation
         userCurrentLatitude = userCurrentLocation.coordinate.latitude
         userCurrentLongitude = userCurrentLocation.coordinate.longitude
         getDistance()
@@ -71,28 +83,22 @@ class ARViewController: BaseViewController, CLLocationManagerDelegate {
         locationManager.requestAlwaysAuthorization()
         
         if !CLLocationManager.locationServicesEnabled() {
-            print("You must enabled location services")
+            print("You must enable location services")
         } else {
             locationManager.startUpdatingLocation()
         }
     }
     
     func getDistance() {
-        //https://developer.apple.com/documentation/corelocation/cllocation/1423689-distance
-        //distance(from:)
-        //Returns the distance (measured in meters) from the current object's location to the specified location.
-        //func distance(from location: CLLocation) -> CLLocationDistance
-        
-        let holeLocation = CLLocation(latitude:holes.holeGPSLocations[0].lat, longitude: holes.holeGPSLocations[0].long)
-        let secondLocation = CLLocation(latitude: userCurrentLatitude, longitude: userCurrentLongitude)
-        let distance = holeLocation.distance(from: secondLocation) //distance in meters
+        let holeLocation = CLLocation(latitude:holes.holeGPSLocations[holes.currentHole-1].lat, longitude: holes.holeGPSLocations[holes.currentHole-1].long)
+        let userLocation = CLLocation(latitude: userCurrentLatitude, longitude: userCurrentLongitude)
+        let distance = holeLocation.distance(from: userLocation) //distance in meters
         let distanceInYards = distance * 1.0936
         let doubleFormat = ".1"
-        print("user latitude: \(userCurrentLatitude)")
-        print("user longitude:  \(userCurrentLongitude)")
-        print(" \(String(format:"%.02f", distanceInYards)) yards ")
-        print("-----------------------------")
         distanceAwayInYards.text = "Distance to pin: \(distanceInYards.format(f: doubleFormat))"
+        
+        // TODO: get bearing
+
     }
 }
 
@@ -100,5 +106,13 @@ class ARViewController: BaseViewController, CLLocationManagerDelegate {
 extension Double {
     func format(f: String) -> String {
         return String(format: "%\(f)f", self)
+    }
+    
+    func toRadians() -> Double {
+        return self * .pi / 180.0
+    }
+    
+    func toDegrees() -> Double {
+        return self * 180.0 / .pi
     }
 }

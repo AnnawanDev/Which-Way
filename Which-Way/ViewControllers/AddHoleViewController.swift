@@ -25,7 +25,7 @@ class AddHoleViewController: BaseViewController, CLLocationManagerDelegate, UIPi
     
     //buttons
     @IBAction func press_home(_ sender: Any) {
-        transition(goingTo: Destination.homeID.rawValue)
+        transition(goingTo: Destination.homeID.rawValue)    //go to "home" page
     }
     
     //TODO - currently saving data to singleton - replace by saving to disk or some kind of coredata solution

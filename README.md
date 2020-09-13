@@ -62,5 +62,14 @@ This hackathon was a great opportunity for some deep diving on technologies.  I 
 * (Annoyance)Using AR means you can't use the simulator and so you have to constantly build to device to test
 
 
+### Feature Rundown:
+* Get device location: :white_check_mark:
+* Ability to add destination GPS locations: :white_check_mark:
+* Ability to tell direction from user to destination: :white_check_mark:
+* Ability to add 3D Augmented Reality marker on screen: :white_check_mark:
+* Ability to render and update AR marker toward destination: :x:
+* Ability to persist/retrieve data remotely: :x:
+
+
 ### Final thoughts
 Adding CoreLocation was easy.  I found it pretty straightforward to get the current device location.  I dived into some [AR (augmented reality) tutorials on Udemy](https://www.udemy.com/course/ios-augmented-reality-the-complete-course-on-arkit/) and found it a lot easier than I thought to add AR.  The real tricky part was getting the bearing to the target location and then constantly updating that visually in the screen.  That'll have to be a future todo in fleshing out this project post-hackathon.  The other thought is that the data is not persisted, so while it's fine for a hackathon, you need a real back-end system to store the data.  Altogether it was a fun couple days of coding.
